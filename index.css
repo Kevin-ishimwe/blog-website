@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.navigation_bar{
+    background-color: #0c4278;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+#nav_head{
+    color: azure;
+    margin: 0% 1%;
+    font-size: xx-large;
+    font-family: "Raleway",sans-serif;
+}
+#nav_ul{
+padding: 1%;
+display: flex;
+width: 50%;
+margin: 0% 0% 0% ;
+
+}
+#nav_li{
+    color: azure;
+    display: flex;
+    margin: -2% 0% 0% 0%;
+    padding: 2% 5%;
+
+    height: 30px;
+}
+#nav_li:hover{
+    background-color: #012448;
+    border-bottom: solid white;
+}
+#nav_a{
+    color: azure;
+    font-size: larger;
+    font-family: sans-serif;
+}
+.hover1 hover{
+    background-color: #0c4278;
+    display: flex;
+    flex-direction: column;
+}
+#nav_li_special{
+    height: 20vh;
+}
+#nav_hov{
+   margin: 3% 5%;
+    color: azure;
+
+   list-style: none;
+}
+.hover1{
+    display: none;
+}
