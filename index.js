@@ -1,7 +1,11 @@
 const hov_nav = document.getElementById("nav_li_special");
 var drop_down = document.querySelectorAll(".hover1");
-
-hov_nav.onmouseover = function () {
-  drop_down[0].classList.add("ok");
+//is for hover mouse
+hov_nav.onmouseenter = function () {
+  drop_down[0].style.display = "flex";
 };
-console.log("test");
+//for when mouse leaves
+
+hov_nav.onmouseleave = function () {
+  drop_down[0].style.display = "none";
+};

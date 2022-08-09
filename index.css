@@ -41,20 +41,31 @@ margin: 0% 0% 0% ;
     font-size: larger;
     font-family: sans-serif;
 }
-.hover1 hover{
+.hover1{
     background-color: #0c4278;
-    display: flex;
+    display: none;
     flex-direction: column;
+    padding: 0%;
+    width: max-content;
+    animation: slide_bottom 1s 1;
+}
+@keyframes slide_bottom {
+    from{height:0%;opacity: .5;}
+    to{height:32vh;opacity:1}
+    
 }
 #nav_li_special{
     height: 20vh;
 }
 #nav_hov{
-   margin: 3% 5%;
-    color: azure;
-
-   list-style: none;
+    height: 7vh;
+    margin: 5% 0%;
+    border-bottom: 1px solid azure;
+    list-style: none;
+    padding: 5%;
+   
 }
-.hover1{
-    display: none;
+
+#nav_hov:hover{
+    background-color: #012448;
 }
