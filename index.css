@@ -5,22 +5,45 @@
 }
 body{
     background-color: #c3c6d1;
+    overflow-x: hidden;
 }
 
 .navigation_bar{
     padding-right: 5%; 
-    background-color: #0c4278;
+    background-color: #d94500;
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 60px;
     box-shadow: 2px 2px 8px black;
+    
+    
 }
-#nav_head{
+.nav_head{
+    margin: .5% 2%;
+    display: flex;
+    animation: fade 4s  2;
+    
+}
+#logo_placeholder{
     color: azure;
-    margin: 0% 1%;
+    font-size: xx-large;
+}
+#nav_h2{
+    color: azure;
+    margin: 0% 3%;
     font-size: xx-large;
     font-family: "Raleway",sans-serif;
+    
+}
+@keyframes fade {
+    0%{opacity: 0;}
+    25%{opacity: 1;}
+    50%{opacity: 0;}
+    75%{opacity: 1;}
+    100%{opacity: 0;}
+   
+    
 }
 #nav_ul{
     
@@ -41,7 +64,7 @@ justify-content: right;
     margin: -1% 2%;
 }
 #nav_a:hover{
-    color: rgb(226, 134, 134);
+    color: rgb(36, 14, 0);
     
 
 }
@@ -51,7 +74,7 @@ justify-content: right;
     font-family: sans-serif;
 }
 .hover1{
-    background-color: #0c4278;
+    background-color: #d94500;
     display: none;
     flex-direction: column;
     padding: 0%;
@@ -59,7 +82,7 @@ justify-content: right;
     animation: slide_bottom .5s 1;
 }
 @keyframes slide_bottom {
-    from{height:0%;opacity: .5;}
+    from{height:0%;opacity: 0}
     to{height:32vh;opacity:1}
     
 }
@@ -82,11 +105,27 @@ justify-content: right;
 }
 
 #nav_hov:hover{
-    background-color: #012448;
+    background-color: #d94500;
 }
 #bars{
     display: none;
 
+}
+/* this is for the contents on the page */
+.socials_side{
+    margin: 3% 0%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+
+}
+#social_icons{
+    color: #222222;
+    
+    font-size: 30px;
+    margin: 50% 1%;
+    
 }
 @media screen and (max-width:790px){
     .navigation_bar{
@@ -109,7 +148,7 @@ justify-content: right;
         float: right;
         left: 50%;
         position: absolute;
-        background-color: #0a3a6b;
+        background-color: #d94500;
         box-shadow: -5px 1px 20px black;
         animation: slider .6s   1 ;
     }
@@ -134,7 +173,7 @@ justify-content: right;
         display: grid;
         color: azure;
         font-size: xx-large;
-        margin: 1.3% -10% ;
+        margin: 1.3% 85% ;
         transition: 1s;
     
     }

@@ -19,7 +19,7 @@ menu_btn.addEventListener("click", function () {
     menu_btn.style.transform = "rotate(90deg)";
     menu_items_cont[0].style.display = "flex";
     menu_btn.style.backgroundColor = "azure";
-    menu_btn.style.color = " #0c4278";
+    menu_btn.style.color = " #d94500";
   } else {
     menu_items_cont[0].style.display = "none";
     menu_btn.style.transform = "rotate(0deg)";
