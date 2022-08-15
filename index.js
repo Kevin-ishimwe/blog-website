@@ -27,3 +27,25 @@ menu_btn.addEventListener("click", function () {
     menu_btn.style.color = " azure";
   }
 });
+//image slider code
+const slide_container = document.getElementsByClassName("image_slider");
+const slide = document.getElementById("slide");
+const slide_text = document.getElementById("slide_text");
+let i = 0;
+function changeImg() {
+  const slde_width = slide.clientWidth;
+  if (i == 6) {
+    i = 0;
+  }
+  if (i < 3) {
+    slide_container[0].scrollLeft += slde_width;
+    console.log("left");
+  } else if (i >= 3) {
+    slide_container[0].scrollLeft -= slde_width;
+    console.log("right");
+  }
+  console.log(i);
+  i++;
+}
+
+setInterval("changeImg()", 3000);
