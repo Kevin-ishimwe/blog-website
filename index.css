@@ -212,12 +212,20 @@ justify-content: right;
     border-left:solid ;
     border-bottom: solid;
     width: fit-content;
+   
+    animation: clippy 2s 1;
     
+    
+}
+@keyframes clippy {
+    from{    clip-path: inset(85% 20% 15% 10%);}
+    to{clip-path: inset(85% 0 90% 0);}
     
 }
 #content_h2:hover{
     color: #ffffff;
     text-shadow: 0 0 10px white;
+
 }
 @keyframes para_width{
  
