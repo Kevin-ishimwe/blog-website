@@ -32,9 +32,10 @@ body{
    
     
 }
-#logo_placeholder{
+#logo{
     color: azure;
     font-size: xx-large;
+    animation: spin 2s steps(500) infinite;
 }
 #nav_h2{
     border-top: solid white;
@@ -42,15 +43,12 @@ body{
     margin: 13px 3%;
     font-size: xx-large;
     font-family: "Raleway",sans-serif;
-    animation: fade 4s  2;
+  
     
 }
-@keyframes fade {
-    0%{opacity: 0;}
-    25%{opacity: 1;}
-    50%{opacity: 0;}
-    75%{opacity: 1;}
-    100%{opacity: 0;}
+@keyframes spin {
+    from{transform: rotateZ(0deg)}
+    to{transform: rotateZ(360deg);}
    
     
 }
@@ -80,6 +78,22 @@ justify-content: right;
 #nav_a{
     color: azure;
     font-size: larger;
+    font-family: sans-serif;
+}
+#nav_li_btn{
+    justify-content: center;
+    border-radius: 10px;
+    margin: -1.5% 0%;
+    display: flex;
+    width: 8%;
+    padding: .5%;
+    border: double  #b93a00;
+    background-color: azure;
+}
+#nav_btn{
+    color: #b93a00;
+    font-size: larger;
+    font-weight: 600;
     font-family: sans-serif;
 }
 .hover1{
@@ -124,7 +138,6 @@ justify-content: right;
 }
 /* this is for the contents on the page */
 .socials_side{
-    float: right;
    
     margin: 10% 90%;
     position: fixed;
@@ -133,13 +146,16 @@ justify-content: right;
     padding: 2%;
 
 }
+
 #social_icons{
     color: #f0f0f0;
     font-size: 30px;
     margin: 50% 1%;
     
 }
-
+#social_icons:hover{
+    text-shadow: 0 0 15px white;
+}
 .content_center{
     box-shadow: 0px 0px 20px black;
     background-color: white;
@@ -193,13 +209,18 @@ justify-content: right;
     background: url(cover_image_1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: fit-content;
 }
 .landing_content{
     display: flex;
     flex-direction: column;
-    padding: 20% 5%;
+    padding: 10% 4%;
     margin: -1% 0%;
+    padding-bottom:18%;
+    width: 50%;
+    z-index: 10;
+    background: linear-gradient(180deg,#b23800c1,#df4700de,rgba(255, 255, 255, 0.707));
+    clip-path: polygon(0 0, 78% 0, 38% 100%, 0 100%, 0 0);
 
 }
 
@@ -209,10 +230,9 @@ justify-content: right;
     font-size: 40px;
     
     transition: ease-in-out;
-    border-left:solid ;
+    
     border-bottom: solid;
     width: fit-content;
-   
     animation: clippy 2s 1;
     
     
@@ -266,6 +286,7 @@ justify-content: right;
     padding: 1%;
     width: 25%;
     background-color: #062E53;
+    z-index: 5;
 }
 .upper_1:hover,.upper_3:hover{
     background-color: #001e3d;
@@ -277,6 +298,7 @@ justify-content: right;
     padding: 1%;
     width: 25%;
     background-color:#d94500;
+    z-index: 5;
 }
 .upper_2:hover{
     background-color: #b93a00;
@@ -288,6 +310,7 @@ justify-content: right;
     padding: 1%;
     width: 25%;
     background-color: #062E53;
+    z-index: 5;
 }
 #content_p2{
     color: azure;
@@ -302,8 +325,8 @@ justify-content: right;
 .content_mid{
     background-color: white;
     padding: 5% 2%;
-    width: 70%;
-    height: 100vh;
+    width: 80%;
+    height: fit-content;
     margin: -5% 15%;
 }
 #content_mid_h2{
@@ -392,15 +415,26 @@ justify-content: right;
     }
     
     
-    
-}
-@media screen and (max-width:600px) {
     .container_landing{
         background: url(cover_image_2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         
-        height: 60vh;
+        height: 80vh;
+        width: 100%;
+      
+    }  
+}
+@media screen and (max-width:600px) {
+    #nav_ul{
+        width: 70%;
+    }
+    .container_landing{
+        background: url(cover_image_2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        height: 80vh;
         width: 100%;
       
     }
@@ -414,9 +448,22 @@ justify-content: right;
     .landing_content{
         display: flex;
         flex-direction: column;
-        padding: 50% 5%;
+        padding: 55% 5%;
         margin: -1% 0%;
     
+    }
+    #content_h2{
+        padding: 1%;
+        color: azure;
+        font-size: 30px;
+        
+        transition: ease-in-out;
+        
+        border-bottom: solid;
+        width: fit-content;
+        animation: clippy 2s 1;
+        
+        
     }
     .content_upper{
         margin: -5% 0%;
@@ -436,8 +483,9 @@ justify-content: right;
     .content_mid{
         background-color: white;
         padding: 5% 2%;
-        width: 100%;
+        width: 95%;
         height: 100vh;
         margin: 0% 0%;
-    }   
+    }
+    
 }
