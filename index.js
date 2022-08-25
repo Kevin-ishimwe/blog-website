@@ -28,24 +28,32 @@ menu_btn.addEventListener("click", function () {
   }
 });
 //image slider code
-const slide_container = document.getElementsByClassName("image_slider");
-const slide = document.getElementById("slide");
+const slide_container = document.getElementsByClassName("slide_big");
+const slide = document.getElementById("img_content");
 const slide_text = document.getElementById("slide_text");
 let i = 0;
 function changeImg() {
   const slde_width = slide.clientWidth;
-  if (i == 6) {
+  if (i == 4) {
     i = 0;
   }
-  if (i < 3) {
+  if (i < 2) {
     slide_container[0].scrollLeft += slde_width;
-    console.log("left");
-  } else if (i >= 3) {
+  } else if (i >= 2) {
     slide_container[0].scrollLeft -= slde_width;
-    console.log("right");
   }
-  console.log(i);
+
   i++;
 }
 
 setInterval("changeImg()", 3000);
+const nav_bar = document.getElementsByClassName("navigation_bar");
+
+window.addEventListener("scroll", () => {
+  console.log(screenY);
+  if (scrollY > 100) {
+    nav_bar[0].style.backgroundColor = "#b93a00";
+  } else {
+    nav_bar[0].style.backgroundColor = "rgba(0, 0, 0,0.307)";
+  }
+});

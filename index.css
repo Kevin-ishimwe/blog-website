@@ -6,15 +6,16 @@
 }
 body{
     background-color: #cecbcb;
-    overflow-x: hidden;
+  
 }
 
 .navigation_bar{
     top: 0px;
     position: fixed;
     z-index: 20;
-    padding-right: 5%; 
-    background-color: #d94500;
+    padding-right: 5%;
+    background-color: rgba(0, 0, 0, 0.207); 
+    
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -206,10 +207,27 @@ justify-content: right;
     background-color: #068c4df8;
 }
 .container_landing{
-    background: url(cover_image_1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: fit-content;
+   
+    position: static;
+    
+}
+.slide_big{
+    width: 100%;
+    border: solid white;
+    display: flex;
+    position: absolute;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+#img_content{
+    z-index: -2;
+  
+    border-radius: 0px;
+   
+    flex: 1 0 100%;
+    height: 100vh;
+
 }
 .landing_content{
     display: flex;
@@ -218,6 +236,7 @@ justify-content: right;
     margin: -1% 0%;
     padding-bottom:18%;
     width: 50%;
+    min-width: 90vh;
     z-index: 10;
     background: linear-gradient(180deg,#b23800c1,#df4700de,rgba(255, 255, 255, 0.707));
     clip-path: polygon(0 0, 78% 0, 38% 100%, 0 100%, 0 0);
@@ -325,9 +344,10 @@ justify-content: right;
 .content_mid{
     background-color: white;
     padding: 5% 2%;
-    width: 80%;
+    width: 90%;
     height: fit-content;
-    margin: -5% 15%;
+    margin: -5% auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 #content_mid_h2{
     text-align: center;
@@ -355,6 +375,49 @@ justify-content: right;
     font-size: 70px;
     margin: 5% ;
 }
+/* this is footer */
+.footer{
+    background-color: rgb(7, 10, 27);
+    padding: 0% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.head_footer{
+    margin: 0% 2% 5%;
+    display: flex;
+    justify-content: center;
+   
+}
+#logo1{
+    height: 50px;
+}
+#footer_h2{
+    margin: 1% 0%;
+    color: azure;
+    display: inline;
+}
+.footer_mid{
+    padding: 0% 0% 5%;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: solid rgb(148, 159, 182);
+
+}
+#li_footer{
+    font-size: larger;
+    color: white;
+    margin: 4%;
+    list-style: none;
+}
+.footer_end{
+    background-color: #d94500;
+    padding: 2%;
+}
+#footer_h4{
+    color: white;
+}
+
 @media screen and (max-width:790px){
     .navigation_bar{
         height: 60px;
@@ -411,6 +474,8 @@ justify-content: right;
         flex-direction: column;
         padding: 30% 5%;
         margin: -1% 0%;
+        clip-path: none;
+        background: none;
     
     }
     
