@@ -47,13 +47,22 @@ function changeImg() {
 }
 
 setInterval("changeImg()", 3000);
-const nav_bar = document.getElementsByClassName("navigation_bar");
 
+const nav_bar = document.getElementsByClassName("navigation_bar");
+const content_animation = document.getElementsByClassName("content_upper");
 window.addEventListener("scroll", () => {
   console.log(screenY);
   if (scrollY > 100) {
     nav_bar[0].style.backgroundColor = "#b93a00";
   } else {
-    nav_bar[0].style.backgroundColor = "rgba(0, 0, 0,0.307)";
+    nav_bar[0].style.backgroundColor = "rgba(0, 0, 0,0.407)";
+  }
+  if (scrollY > 50) {
+    content_animation[0].style.display = "flex";
   }
 });
+
+// window.onload = () => {
+//   document.body.style.background = "black";
+//   console.log("loadin");
+// };

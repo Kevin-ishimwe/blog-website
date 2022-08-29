@@ -6,6 +6,7 @@
 }
 body{
     background-color: #cecbcb;
+    overflow-x: hidden;
   
 }
 
@@ -14,7 +15,7 @@ body{
     position: fixed;
     z-index: 20;
     padding-right: 5%;
-    background-color: rgba(0, 0, 0, 0.207); 
+    background-color:  rgba(0, 0, 0, 0.207); 
     
     width: 100%;
     display: flex;
@@ -68,14 +69,17 @@ justify-content: right;
     width: fit-content;
     color: azure;
     display: flex;
-    padding: 0%;
-    margin: -1% 2%;
-}
-#nav_a:hover{
-    color: rgb(36, 14, 0);
-    
+    padding: 2% 2% 1%;
+    margin: -2.9% 0%;
 
+    
 }
+#nav_li:hover,#nav_l:hover{
+    background-color: rgb(185, 58, 0);
+    border-bottom: solid white;
+    transition: .2s ease-in-out;
+}
+
 #nav_a{
     color: azure;
     font-size: larger;
@@ -98,32 +102,42 @@ justify-content: right;
     font-family: sans-serif;
 }
 .hover1{
-    height: 40vh;
+    position: absolute;
+    height: fit-content;
+    padding: 2%;
     background-color: #d94500;
     display: none;
-    z-index: 25;
+    z-index: 3;
     flex-direction: column;
     padding: 0%;
-    width: max-content;
+    width: 30vh;
     animation: slide_bottom .5s 1;
 }
 @keyframes slide_bottom {
     from{height:0%;opacity: 0}
-    to{height:40vh;opacity:1}
+    to{height:fit-content;opacity:1}
     
 }
 #nav_li_special{
-    padding: .2%;
-    margin-top: -2%;
-
+    margin: -3% 0%;
+    justify-content: center;
+    display: block;
+   
+    
 }
 #nav_l{
+    display: flex;
+    padding: 15.5% 5%;
+    border: solid white;
     list-style: none;
-    margin-top: 9%;
+    width: max-content;
+   
+
+    
 }
 #nav_hov{
-    height: 5vh;
-    margin: 3% 0%;
+    height: 100%;
+   width:85%;
     border-bottom: 1px solid azure;
     list-style: none;
     padding: 5%;
@@ -131,7 +145,7 @@ justify-content: right;
 }
 
 #nav_hov:hover{
-    background-color: #d94500;
+    background-color: rgb(238, 83, 0);
 }
 #bars{
     display: none;
@@ -145,11 +159,13 @@ justify-content: right;
     display: flex;
     flex-direction: column;
     padding: 2%;
+    z-index: 1;
 
 }
 
 #social_icons{
-    color: #f0f0f0;
+    z-index: 10;
+    color: #f3eeee;
     font-size: 30px;
     margin: 50% 1%;
     
@@ -160,7 +176,6 @@ justify-content: right;
 .content_center{
     box-shadow: 0px 0px 20px black;
     background-color: white;
-    
     width: 50%;
     height: 100vh;
 }
@@ -212,6 +227,7 @@ justify-content: right;
     
 }
 .slide_big{
+    
     width: 100%;
     border: solid white;
     display: flex;
@@ -219,17 +235,24 @@ justify-content: right;
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    animation: phase 2s 1;
 }
 #img_content{
-    z-index: -2;
-  
+    z-index: 0;
     border-radius: 0px;
-   
     flex: 1 0 100%;
-    height: 100vh;
+    height: 105vh;
+
+   
 
 }
+@keyframes phase {
+    from{transform: scale(1.8);}
+    
+    
+}
 .landing_content{
+    height: 45vh;
     display: flex;
     flex-direction: column;
     padding: 10% 4%;
@@ -295,7 +318,7 @@ justify-content: right;
     border: solid azure;
 }
 .content_upper{
-    display: flex;
+    display: none;
     justify-content: space-around;
 }
 .upper_1{
@@ -306,6 +329,11 @@ justify-content: right;
     width: 25%;
     background-color: #062E53;
     z-index: 5;
+    animation: lefty 1s 1;
+}
+@keyframes lefty{
+    from{transform: translateX(-550px);}
+    to{transform: translateX(0px);}
 }
 .upper_1:hover,.upper_3:hover{
     background-color: #001e3d;
@@ -318,6 +346,11 @@ justify-content: right;
     width: 25%;
     background-color:#d94500;
     z-index: 5;
+    animation: downy 1s 1;
+}
+@keyframes downy{
+    from{transform: translatey(550px);}
+    to{transform: translateX(0px);}
 }
 .upper_2:hover{
     background-color: #b93a00;
@@ -330,7 +363,13 @@ justify-content: right;
     width: 25%;
     background-color: #062E53;
     z-index: 5;
+    animation: righty 2s 1;
 }
+@keyframes righty{
+    from{transform: translateX(550px);}
+    to{transform: translateX(0px);}
+}
+
 #content_p2{
     color: azure;
     font-size: large;
@@ -342,6 +381,7 @@ justify-content: right;
     font-family: 'Roboto Condensed',sans-serif;
 }
 .content_mid{
+    z-index: 0;
     background-color: white;
     padding: 5% 2%;
     width: 90%;
@@ -454,9 +494,13 @@ justify-content: right;
         border-top: solid azure;
         width: 100%;
         padding: 5%;
+    
     }
-    #nav_l{
-        display: none; 
+    #nav_li_special{
+       
+        display: none;
+       
+        
     }
     #bars{
         padding: 2px;
